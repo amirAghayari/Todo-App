@@ -1,0 +1,47 @@
+/* reset */
+html {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.5;
+  font-weight: 700;
+  height: 100vh;
+}
+/* variable */
+.theme-primary {
+  --primary-blue: hsl(220, 98%, 61%);
+  --background-primary: linear-gradient hsl(192, 100%, 67%) to
+    hsl(280, 87%, 65%);
+  --white: #e9ecef;
+}
+
+.light-theme {
+  --background: hsl(0, 0%, 98%);
+  --todo-bac: hsl(236, 33%, 92%);
+  --border-color: hsl(233, 11%, 84%);
+  --text-color-disable: hsl(236, 9%, 61%);
+  --text-color: hsl(235, 19%, 35%);
+}
+
+.dark-theme {
+  --background: hsl(235, 21%, 11%);
+  --todo-bac: hsl(235, 24%, 19%);
+  --text-color: hsl(234, 39%, 85%);
+  --text-color-hover: hsl(236, 33%, 92%); /*(hover)*/
+  --border-color: hsl(234, 11%, 52%);
+  --Very-Dark-Grayish-Blue: hsl(233, 14%, 35%);
+  --Very-Dark-Grayish-Blue: hsl(237, 14%, 26%);
+
+body {
+  background-image: url(assets/images/bg-desktop-light.jpg);
+
+  background-size: cover;
+  /* background-image: var(--background-primary); */
+}
