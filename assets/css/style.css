@@ -23,7 +23,7 @@ body {
 }
 
 .light-theme {
-  --background: hsl(0, 0%, 98%);
+  --color-bac: hsl(0, 0%, 98%);
   --todo-bac: hsl(236, 33%, 92%);
   --border-color: hsl(233, 11%, 84%);
   --text-color-disable: hsl(236, 9%, 61%);
@@ -31,17 +31,199 @@ body {
 }
 
 .dark-theme {
-  --background: hsl(235, 21%, 11%);
+  --color-bac: hsl(235, 21%, 11%);
   --todo-bac: hsl(235, 24%, 19%);
   --text-color: hsl(234, 39%, 85%);
   --text-color-hover: hsl(236, 33%, 92%); /*(hover)*/
   --border-color: hsl(234, 11%, 52%);
   --Very-Dark-Grayish-Blue: hsl(233, 14%, 35%);
   --Very-Dark-Grayish-Blue: hsl(237, 14%, 26%);
+}
 
 body {
-  background-image: url(assets/images/bg-desktop-light.jpg);
+  background-image: url(../images/bg-desktop-light.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.container {
+  position: absolute;
+  inset: 0;
+  margin: auto;
 
-  background-size: cover;
-  /* background-image: var(--background-primary); */
+  height: 58rem;
+  max-width: 55rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.h1 {
+  font-size: 4.4rem;
+  font-family: sans-serif;
+  color: var(--white);
+}
+
+.size-6 {
+  width: 4.4rem;
+  height: 4.4rem;
+}
+
+.exchange-theme {
+  background: none;
+  border: none;
+  color: var(--white);
+}
+
+.add-todo {
+  background-color: var(--color-bac);
+  border-radius: 0.8rem;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0.4rem 0.4rem 2.4rem var(--text-color-disable);
+}
+
+.todo-input {
+  padding: 1.6rem;
+  width: 48rem;
+  margin-left: 0.6rem;
+  background-color: var();
+  border: none;
+  box-shadow: 0.2rem 0.2rem 0.8rem var(--todo-bac);
+  font-size: 1.6rem;
+  font-family: sans-serif;
+  color: var(--text-color);
+  border-radius: 0.6rem;
+  transition: all 0.2s;
+}
+
+.todo-input:hover {
+  box-shadow: 0.4rem 0.4rem 2.4rem var(--text-color-disable);
+}
+
+.add-todo-btn {
+  /* background-color: aqua; */
+  width: 3.6rem;
+  height: 3.6rem;
+  border-radius: 50%;
+  border: 0.2rem solid var(--border-color);
+  margin-right: 1.4rem;
+  transition: all 0.2s;
+}
+
+.add-todo-btn:hover {
+  cursor: pointer;
+  box-shadow: 0.4rem 0.4rem 2.4rem var(--text-color-disable);
+}
+
+.todo-list {
+  background-color: var(--color-bac);
+  max-width: 55rem;
+  height: 35rem;
+  border-radius: 1.2rem;
+  margin-top: 2.2rem;
+  box-shadow: 0.1rem 0.1rem 4rem var(--border-color);
+  overflow: scroll;
+  scrollbar-color: #59a0b6;
+}
+
+.todo {
+  border-bottom: solid 0.1rem var(--border-color);
+  margin-top: 0.8rem;
+  border-radius: 0.8rem 0.8rem 0 0;
+  height: 5.2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.div {
+  display: flex;
+  flex-direction: row;
+  gap: 1.2rem;
+  align-items: center;
+}
+
+.p {
+  font-size: 1.6rem;
+  color: var(--text-color);
+}
+
+.do-btn {
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 50%;
+  border: 0.2rem solid rgb(104, 226, 104);
+  margin-left: 1.4rem;
+  transition: all 0.2s;
+}
+.do-btn:hover {
+  cursor: pointer;
+  box-shadow: 0.4rem 0.4rem 2.4rem rgb(156, 206, 156);
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  margin: 0.2rem 0.8rem 0 0;
+}
+
+.size-7 {
+  transition: all 0.2s;
+  fill: #ce2525;
+}
+
+.size-7:hover {
+  border-radius: 0.4rem;
+  cursor: pointer;
+  box-shadow: 0.4rem 0.4rem 2.4rem rgb(221, 147, 147);
+  color: #dd1212;
+}
+
+.todo-bottom {
+  background-color: var(--color-bac);
+  height: 4rem;
+  border-radius: 0 0 0.8rem 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.2rem;
+}
+
+.btn {
+  width: 8rem;
+  font-size: 1.4rem;
+  background: none;
+  border: none;
+  color: var(--text-color);
+  transition: all 0.3rem;
+  border-left: 0.2rem solid var(--border-color);
+}
+
+.btn:hover {
+  color: var(--text-color-hover);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.clear-btn {
+  margin-right: 1.6rem;
+  border-radius: 0.8rem;
+  width: 10.6rem;
+  height: 3rem;
+  transition: all 0.4s;
+}
+
+.clear-btn:hover {
+  box-shadow: 0.2rem 0.2rem 4rem var(--text-color-disable);
+}
+
+.p-item {
+  color: var(--text-color-disable);
+  font-size: 1rem;
+  margin-left: 0.6rem;
 }

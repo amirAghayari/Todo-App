@@ -7,7 +7,145 @@
 
     <title>TodoList App</title>
   </head>
-  <body class="theme">
-    <div class="container"></div>
+  <body class="theme-primary light-theme">
+    <div class="container">
+      <div class="header">
+        <h1 class="h1">T O D O</h1>
+        <button class="exchange-theme">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
+            />
+            <!-- <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"
+              />
+            </svg> -->
+          </svg>
+        </button>
+      </div>
+      <main>
+        <div class="main">
+          <div class="add-todo">
+            <form action="">
+              <input
+                type="text"
+                name="Enter new Todo "
+                value="Enter new Todo"
+                class="todo-input"
+              />
+            </form>
+            <button class="add-todo-btn"></button>
+          </div>
+          <div class="todo-list">
+            <div class="todo">
+              <div class="div">
+                <button class="do-btn"></button>
+                <p class="p">khsbd lsdj dgllfsd nlvud dfhh</p>
+              </div>
+              <button class="delete-btn">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="32"
+                  height="32"
+                  fill="#000000"
+                  viewBox="0 0 256 256"
+                  class="size-7"
+                >
+                  <path
+                    d="M216,48H176V40a24,24,0,0,0-24-24H104A24,24,0,0,0,80,40v8H40a8,8,0,0,0,0,16h8V208a16,16,0,0,0,16,16H192a16,16,0,0,0,16-16V64h8a8,8,0,0,0,0-16ZM96,40a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8v8H96Zm96,168H64V64H192ZM112,104v64a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Zm48,0v64a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Z"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+            <!-- <div class="todo">
+              <div class="div">
+                <button class="do-btn"></button>
+                <p class="p">khsbd lsdj dgllfsd nlvud dfhh</p>
+              </div>
+              <button class="delete-btn">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="32"
+                  height="32"
+                  fill="#000000"
+                  viewBox="0 0 256 256"
+                  class="size-7"
+                >
+                  <path
+                    d="M216,48H176V40a24,24,0,0,0-24-24H104A24,24,0,0,0,80,40v8H40a8,8,0,0,0,0,16h8V208a16,16,0,0,0,16,16H192a16,16,0,0,0,16-16V64h8a8,8,0,0,0,0-16ZM96,40a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8v8H96Zm96,168H64V64H192ZM112,104v64a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Zm48,0v64a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Z"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+            <div class="todo">
+              <div class="div">
+                <button class="do-btn"></button>
+                <p class="p">khsbd lsdj dgllfsd nlvud dfhh</p>
+              </div>
+              <button class="delete-btn">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="32"
+                  height="32"
+                  fill="#000000"
+                  viewBox="0 0 256 256"
+                  class="size-7"
+                >
+                  <path
+                    d="M216,48H176V40a24,24,0,0,0-24-24H104A24,24,0,0,0,80,40v8H40a8,8,0,0,0,0,16h8V208a16,16,0,0,0,16,16H192a16,16,0,0,0,16-16V64h8a8,8,0,0,0,0-16ZM96,40a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8v8H96Zm96,168H64V64H192ZM112,104v64a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Zm48,0v64a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Z"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+            <div class="todo">
+              <div class="div">
+                <button class="do-btn"></button>
+                <p class="p">khsbd lsdj dgllfsd nlvud dfhh</p>
+              </div>
+              <button class="delete-btn">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="32"
+                  height="32"
+                  fill="#000000"
+                  viewBox="0 0 256 256"
+                  class="size-7"
+                >
+                  <path
+                    d="M216,48H176V40a24,24,0,0,0-24-24H104A24,24,0,0,0,80,40v8H40a8,8,0,0,0,0,16h8V208a16,16,0,0,0,16,16H192a16,16,0,0,0,16-16V64h8a8,8,0,0,0,0-16ZM96,40a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8v8H96Zm96,168H64V64H192ZM112,104v64a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Zm48,0v64a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Z"
+                  ></path>
+                </svg>
+              </button>
+            </div> -->
+          </div>
+          <div class="todo-bottom">
+            <p class="p-item">5 items left</p>
+            <button class="btn all-btn">All</button>
+            <button class="btn active-btn">Active</button>
+            <button class="btn compled-btn">Compled</button>
+            <button class="btn clear-btn">Clear Combled</button>
+          </div>
+        </div>
+      </main>
+    </div>
   </body>
 </html>
