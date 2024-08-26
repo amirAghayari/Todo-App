@@ -102,14 +102,14 @@ body {
 }
 
 .todo-input:hover {
-  box-shadow: 0.4rem 0.4rem 2.4rem var(--text-color-disable);
+  box-shadow: 0.1rem 0.1rem 0.8rem var(--text-color-disable);
 }
 
 .add-todo-btn {
   /* background-color: aqua; */
-  width: 3.6rem;
-  height: 3.6rem;
-  border-radius: 50%;
+  width: 4.2rem;
+  height: 4.2rem;
+  border-radius: 25%;
   border: 0.2rem solid var(--border-color);
   margin-right: 1.4rem;
   transition: all 0.2s;
@@ -117,17 +117,19 @@ body {
 
 .add-todo-btn:hover {
   cursor: pointer;
-  box-shadow: 0.4rem 0.4rem 2.4rem var(--text-color-disable);
+  box-shadow: 0.1rem 0.1rem 0.8rem var(--text-color-disable);
 }
 
 .todo-list {
   background-color: var(--color-bac);
   max-width: 55rem;
   height: 35rem;
-  border-radius: 1.2rem;
+  border-radius: 1.2rem 1.2rem 0 0;
   margin-top: 2.2rem;
   box-shadow: 0.1rem 0.1rem 4rem var(--border-color);
   overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: auto;
   scrollbar-color: #59a0b6;
 }
 
@@ -150,6 +152,7 @@ body {
 
 .p {
   font-size: 1.6rem;
+  font-family: sans-serif;
   color: var(--text-color);
 }
 
@@ -163,7 +166,7 @@ body {
 }
 .do-btn:hover {
   cursor: pointer;
-  box-shadow: 0.4rem 0.4rem 2.4rem rgb(156, 206, 156);
+  box-shadow: 0.1rem 0.1rem 0.8rem rgb(156, 206, 156);
 }
 
 .delete-btn {
@@ -180,7 +183,7 @@ body {
 .size-7:hover {
   border-radius: 0.4rem;
   cursor: pointer;
-  box-shadow: 0.4rem 0.4rem 2.4rem rgb(221, 147, 147);
+  box-shadow: 0.1rem 0.1rem 0.8rem rgb(221, 147, 147);
   color: #dd1212;
 }
 
@@ -190,6 +193,7 @@ body {
   border-radius: 0 0 0.8rem 0.8rem;
   display: flex;
   align-items: center;
+  /* box-shado: 0.1rem 0.1rem 4rem var(--border-color); */
   justify-content: space-between;
   gap: 1.2rem;
 }
@@ -219,7 +223,7 @@ body {
 }
 
 .clear-btn:hover {
-  box-shadow: 0.2rem 0.2rem 4rem var(--text-color-disable);
+  box-shadow: 0.1rem 0.1rem 0.8rem var(--text-color-disable);
 }
 
 .p-item {
