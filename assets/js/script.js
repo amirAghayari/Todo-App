@@ -6,11 +6,26 @@ const addTodo = document.querySelector(".add-todo-btn");
 const myTodo = document.querySelector(".p");
 const todoList = document.querySelector(".todo-list");
 const deleteBtns = document.querySelectorAll(".delete-btn");
+const doBtn = document.querySelector(".do-btn");
+
 //  function to create new todo html
 const createTodoHTML = (value) => {
   return `<div class="todo">
           <div class="div">
-            <button class="do-btn"></button>
+            <button class="do-btn"> <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-8"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m4.5 12.75 6 6 9-13.5"
+                    />
+                  </svg></button>
             <p class="p">${value}</p>
           </div>
           <button class="delete-btn">
@@ -51,12 +66,24 @@ input.addEventListener("click", () => {
   input.setAttribute("value", "");
 });
 
-// Function for delete Todo
+// Function for delete Todo and mark task
 todoList.addEventListener("click", (event) => {
   if (event.target.closest(".delete-btn")) {
     event.target.closest(".todo").remove();
   }
+  if (event.target.closest(".do-btn")) {
+    const todoItem = event.target.closest(".todo").querySelector(".p");
+    todoItem.classList.toggle("active");
+  }
+
+  if (event.target.closest(".size-8")) {
+    const todoIcon = event.target.closest(".todo").querySelector(".size-8");
+    todoIcon.classList.toggle("active");
+  }
 });
+
+//  doing Todo
 
 // Calling Function
 addTodoFunc();
+// doTodo();

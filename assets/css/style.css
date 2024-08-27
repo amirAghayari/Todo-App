@@ -155,6 +155,10 @@ body {
   font-family: sans-serif;
   color: var(--text-color);
 }
+.p.active {
+  text-decoration: line-through;
+  color: var(--text-color-disable);
+}
 
 .do-btn {
   width: 3.2rem;
@@ -167,6 +171,9 @@ body {
 .do-btn:hover {
   cursor: pointer;
   box-shadow: 0.1rem 0.1rem 0.8rem rgb(156, 206, 156);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .delete-btn {
@@ -230,4 +237,15 @@ body {
   color: var(--text-color-disable);
   font-size: 1rem;
   margin-left: 0.6rem;
+}
+
+.size-8 {
+  color: rgb(28, 109, 28);
+  width: 3rem;
+  height: 3rem;
+  opacity: 0;
+}
+
+.size-8.active {
+  opacity: 1;
 }
