@@ -5,9 +5,14 @@ const input = document.querySelector(".todo-input");
 const addTodo = document.querySelector(".add-todo-btn");
 const myTodo = document.querySelector(".p");
 const todoList = document.querySelector(".todo-list");
+const todo = document.querySelector(".todo");
 const deleteBtns = document.querySelectorAll(".delete-btn");
 const doBtn = document.querySelector(".do-btn");
-
+const clear = document.querySelector(".clear-btn");
+const activeElement = document.querySelectorAll("todo-list");
+const activeTodo = document.querySelector(".active-btn");
+const compledTodo = document.querySelector(".compled-btn");
+const allTodo = document.querySelector(".all-btn");
 //  function to create new todo html
 const createTodoHTML = (value) => {
   return `<div class="todo">
@@ -82,8 +87,37 @@ todoList.addEventListener("click", (event) => {
   }
 });
 
-//  doing Todo
+// clear completed
+clear.addEventListener("click", () => {
+  todoList.innerHTML = "";
+});
 
+// active Todo Event
+activeTodo.addEventListener("click", () => {
+  const todos = document.querySelectorAll(".todo");
+  todos.forEach((todo) => {
+    if (todo.querySelector(".p").classList.contains("active")) {
+      todo.style.display = "none";
+    }
+  });
+});
+
+// compled Todo Event
+compledTodo.addEventListener("click", () => {
+  const todos = document.querySelectorAll(".todo");
+  todos.forEach((todo) => {
+    if (!todo.querySelector(".p").classList.contains("active")) {
+      todo.style.display = "none";
+    }
+  });
+});
+
+// all Todo Event
+allTodo.addEventListener("click", () => {
+  const todos = document.querySelectorAll(".todo");
+  todos.forEach((todo) => {
+    todo.style.display = "flex";
+  });
+});
 // Calling Function
 addTodoFunc();
-// doTodo();
