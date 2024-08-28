@@ -17,12 +17,12 @@ body {
 /* variable */
 .theme-primary {
   --primary-blue: hsl(220, 98%, 61%);
-  --background-primary: linear-gradient hsl(192, 100%, 67%) to
-    hsl(280, 87%, 65%);
   --white: #e9ecef;
 }
 
 .light-theme {
+  --background-primary: linear-gradient hsl(192, 100%, 67%) to
+    hsl(280, 87%, 65%);
   --color-bac: hsl(0, 0%, 98%);
   --todo-bac: hsl(236, 33%, 92%);
   --border-color: hsl(233, 11%, 84%);
@@ -31,6 +31,8 @@ body {
 }
 
 .dark-theme {
+  --background-primary: linear-gradient hsl(192, 100%, 67%) to
+    hsl(280, 87%, 65%);
   --color-bac: hsl(235, 21%, 11%);
   --todo-bac: hsl(235, 24%, 19%);
   --text-color: hsl(234, 39%, 85%);
@@ -41,7 +43,8 @@ body {
 }
 
 body {
-  background-image: url(../images/bg-desktop-light.jpg) !important;
+  background-image: url(../images/bg-desktop-light.jpg);
+  background-color: var(--color-bac);
   z-index: 1000000;
   background-repeat: no-repeat;
   background-size: contain;
@@ -79,13 +82,13 @@ body {
 }
 
 .add-todo {
-  background-color: var(--color-bac);
+  background-color: var(--todo-bac);
   border-radius: 0.8rem;
   height: 6rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0.4rem 0.4rem 2.4rem var(--text-color-disable);
+  box-shadow: 0.2rem 0.2rem 0.8rem var(--text-color-disable);
 }
 
 .todo-input {
@@ -97,7 +100,7 @@ body {
   box-shadow: 0.2rem 0.2rem 0.8rem var(--todo-bac);
   font-size: 1.6rem;
   font-family: sans-serif;
-  color: var(--text-color);
+  color: var(--Very-Dark-Grayish-Blue);
   border-radius: 0.6rem;
   transition: all 0.2s;
 }
@@ -122,12 +125,12 @@ body {
 }
 
 .todo-list {
-  background-color: var(--color-bac);
+  background-color: var(--todo-bac);
   max-width: 55rem;
   height: 35rem;
   border-radius: 1.2rem 1.2rem 0 0;
   margin-top: 2.2rem;
-  box-shadow: 0.1rem 0.1rem 4rem var(--border-color);
+  /* box-shadow: 0.1rem 0.1rem 4rem var(--border-color); */
   overflow: scroll;
   overflow-x: hidden;
   overflow-y: auto;
@@ -166,12 +169,13 @@ body {
   height: 3.2rem;
   border-radius: 50%;
   border: 0.2rem solid rgb(104, 226, 104);
+  background-color: var(--background-primary);
   margin-left: 1.4rem;
   transition: all 0.2s;
 }
 .do-btn:hover {
   cursor: pointer;
-  box-shadow: 0.1rem 0.1rem 0.8rem rgb(156, 206, 156);
+  box-shadow: 0.1rem 0.1rem 0.8rem rgb(126, 126, 126);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -191,13 +195,14 @@ body {
 .size-7:hover {
   border-radius: 0.4rem;
   cursor: pointer;
-  box-shadow: 0.1rem 0.1rem 0.8rem rgb(221, 147, 147);
+  box-shadow: 0.1rem 0.1rem 0.8rem rgb(124, 124, 124);
   color: #dd1212;
 }
 
 .todo-bottom {
-  background-color: var(--color-bac);
+  background-color: var(--todo-bac);
   height: 4rem;
+  border-top: 0.1rem solid var(--border-color);
   border-radius: 0 0 0.8rem 0.8rem;
   display: flex;
   align-items: center;

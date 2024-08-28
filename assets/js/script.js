@@ -15,9 +15,8 @@ const activeTodo = document.querySelector(".active-btn");
 const compledTodo = document.querySelector(".compled-btn");
 const allTodo = document.querySelector(".all-btn");
 const item = document.querySelector(".p-item");
-const darkModeBtn = document.querySelector(".darkmode-layer");
 const exchange = document.querySelector(".exchange-theme");
-console.log(darkModeBtn);
+
 //  function to create new todo html
 const createTodoHTML = (value) => {
   return `<li class="todo">
@@ -141,26 +140,8 @@ const decreaseNumber = () => {
   item.textContent = `${number - 1} items`;
 };
 
-// dark mode
-const options = {
-  bottom: "64px", // default: '32px'
-  right: "unset", // default: '32px'
-  left: "32px", // default: 'unset'
-  time: "0.3s", // default: '0.3s'
-  mixColor: "#fff", // default: '#fff'
-  backgroundColor: "#fff", // default: '#fff'
-  buttonColorDark: "#100f2c", // default: '#100f2c'
-  buttonColorLight: "#fff", // default: '#fff'
-  saveInCookies: false, // default: true,
-  label: "🌓", // default: ''
-  // autoMatchOsTheme: true, // default: true
-};
-
-const darkMode = new Darkmode(options);
-darkMode.showWidget();
-
 ////////////////////////
-const sun = `<svg
+let sun = `<svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
@@ -173,7 +154,7 @@ const sun = `<svg
               stroke-linejoin="round"
               d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
             />`;
-const moon = `<svg
+let moon = `<svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
@@ -189,12 +170,18 @@ const moon = `<svg
             </svg>`;
 
 // exchange icon
-let isSun = true;
-darkModeBtn.addEventListener("click", () => {
-  exchange.innerHTML = isSun ? moon : sun;
-  isSun = !isSun;
+exchange.addEventListener("click", () => {
+  document.body.classList.toggle("dark-theme");
+  if (document.body.classList.contains("dark-theme")) {
+    document.body.style.backgroundImage =
+      "url('assets/images/bg-desktop-dark.jpg')";
+    document.querySelector(".exchange-theme").innerHTML = sun;
+  } else {
+    document.body.style.backgroundImage =
+      "url('assets/images/bg-desktop-light.jpg')";
+    document.querySelector(".exchange-theme").innerHTML = moon;
+  }
 });
 
 // Calling Function
 addTodoFunc();
-sunMoon();
