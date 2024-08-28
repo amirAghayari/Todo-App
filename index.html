@@ -51,7 +51,7 @@
             </form>
             <button class="add-todo-btn">Add</button>
           </div>
-          <div class="todo-list">
+          <ul class="todo-list">
             <!-- <div class="todo">
               <div class="div">
                 <button class="do-btn"></button>
@@ -112,9 +112,9 @@
                 </svg>
               </button>
             </div> -->
-          </div>
+          </ul>
           <div class="todo-bottom">
-            <p class="p-item">5 items left</p>
+            <p class="p-item">0 items left</p>
             <button class="btn all-btn">All</button>
             <button class="btn active-btn">Active</button>
             <button class="btn compled-btn">Compled</button>
@@ -123,5 +123,13 @@
         </div>
       </main>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+    <script>
+      function addDarkmodeWidget() {
+        new Darkmode().showWidget();
+      }
+      window.addEventListener("load", addDarkmodeWidget);
+    </script>
   </body>
 </html>

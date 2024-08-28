@@ -41,7 +41,8 @@ body {
 }
 
 body {
-  background-image: url(../images/bg-desktop-light.jpg);
+  background-image: url(../images/bg-desktop-light.jpg) !important;
+  z-index: 1000000;
   background-repeat: no-repeat;
   background-size: contain;
 }
